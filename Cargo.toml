@@ -1,0 +1,20 @@
+[package]
+name = "md-rabbit"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+eframe = "0.33" # For building desktop apps with eframe/
+egui = "0.33.0" # For GUI components
+pulldown-cmark = "0.13" # For Markdown parsing
+egui_commonmark = "0.22" # For rendering Markdown in egui
+rfd = "0.15.4"  # For file dialogs
+
+[profile.release]
+opt-level = 3
+lto = true
+codegen-units = 1
+panic = "abort"
+strip = true
+
+
